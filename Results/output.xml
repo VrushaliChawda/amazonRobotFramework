@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.9 on darwin)" generated="20220310 22:51:28.973" rpa="false" schemaversion="2">
+<suite id="s1" name="Amazon" source="/Users/vrushalichawda/PycharmProjects/amazon/Tests/amazon.robot">
+<test id="s1-t1" name="Opening Chrome Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://amazon.in</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220310 22:51:29.212" level="INFO">Opening browser 'gc' to base url 'http://amazon.in'.</msg>
+<status status="PASS" starttime="20220310 22:51:29.211" endtime="20220310 22:51:34.252"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Hello</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220310 22:51:34.252" endtime="20220310 22:51:34.281"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id='twotabsearchtextbox']</arg>
+<arg>Fossil watch</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220310 22:51:34.282" level="INFO">Typing text 'Fossil watch' into text field 'xpath=//*[@id='twotabsearchtextbox']'.</msg>
+<status status="PASS" starttime="20220310 22:51:34.282" endtime="20220310 22:51:34.511"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220310 22:51:34.512" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220310 22:51:34.511" endtime="20220310 22:51:36.297"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "Fossil watch"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220310 22:51:36.297" endtime="20220310 22:51:36.354"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@cel_widget_id='MAIN-SEARCH_RESULTS-3']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220310 22:51:36.355" level="INFO">Clicking element 'xpath=//*[@cel_widget_id='MAIN-SEARCH_RESULTS-3']'.</msg>
+<status status="PASS" starttime="20220310 22:51:36.354" endtime="20220310 22:51:36.600"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20220310 22:51:36.604" level="INFO">${handles} = ['CDwindow-5DEBD46D9C3615A5AF6BA8DBA18681F8', 'CDwindow-EAA54A47460254A54FE4D84155732F1E']</msg>
+<status status="PASS" starttime="20220310 22:51:36.601" endtime="20220310 22:51:36.605"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${Handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220310 22:51:36.605" endtime="20220310 22:51:36.724"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@id='add-to-cart-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220310 22:51:36.724" level="INFO">Clicking button 'xpath=//input[@id='add-to-cart-button']'.</msg>
+<status status="PASS" starttime="20220310 22:51:36.724" endtime="20220310 22:51:41.889"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Added to Cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220310 22:51:41.889" endtime="20220310 22:51:41.924"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220310 22:51:41.924" endtime="20220310 22:51:42.133"/>
+</kw>
+<doc>Starting automaiton test</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220310 22:51:29.211" endtime="20220310 22:51:42.133"/>
+</test>
+<doc>Creating first robot test</doc>
+<status status="PASS" starttime="20220310 22:51:28.974" endtime="20220310 22:51:42.134"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
